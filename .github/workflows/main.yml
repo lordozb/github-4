@@ -22,7 +22,7 @@ jobs:
       - name: 'Synapse workspace deployment'
         uses: Azure/Synapse-workspace-deployment@v0.2
         with:
-          TargetWorkspaceName: 'github-3'
+          TargetWorkspaceName: 'github-4'
           TemplateFile: './TemplateForWorkspace.json'
           ParametersFile: './TemplateParametersForWorkspace.json'
           OverrideArmParameters: './Overrides.yaml'
