@@ -25,10 +25,10 @@ jobs:
           TargetWorkspaceName: 'aadsharmasynapse'
           TemplateFile: './TemplateForWorkspace.json'
           ParametersFile: './TemplateParametersForWorkspace.json'
-          environment: 'Azure China'
+          environment: 'Azure US Government'
           resourceGroup: 'aadsharmarg'
           clientId: ${{ secrets.CLIENTID }}
           clientSecret: ${{ secrets.CLIENTSECRET }}
-          subscriptionId: '3cf5ae44-6e99-42ad-8784-2c0e5cebdb24'
-          tenantId: '3d0a72e2-8b06-4528-98df-1391c6f12c11'
+          subscriptionId: '68f41947-d98f-4b71-be8b-4ba873495ce0'
+          tenantId: '63296244-ce2c-46d8-bc36-3e558792fbee'
 
