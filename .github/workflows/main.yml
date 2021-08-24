@@ -25,10 +25,10 @@ jobs:
           TargetWorkspaceName: 'github-4'
           TemplateFile: './TemplateForWorkspace.json'
           ParametersFile: './TemplateParametersForWorkspace.json'
-          environment: 'Azure US Government'
-          resourceGroup: 'aadsharmarg'
+          environment: 'Azure Public'
+          resourceGroup: 'actionbugbash'
           clientId: ${{ secrets.CLIENTID }}
           clientSecret: ${{ secrets.CLIENTSECRET }}
-          subscriptionId: '68f41947-d98f-4b71-be8b-4ba873495ce0'
-          tenantId: '63296244-ce2c-46d8-bc36-3e558792fbee'
+          subscriptionId: '8ef12316-67c1-417e-8175-a3a49c29fc64'
+          tenantId: '72f988bf-86f1-41af-91ab-2d7cd011db47'
 
