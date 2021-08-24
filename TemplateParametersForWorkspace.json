@@ -3,13 +3,418 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"workspaceName": {
-			"value": "aadsharma-cicd-ppe-source"
+			"value": "dantestpara"
 		},
-		"aadsharma-cicd-ppe-source-WorkspaceDefaultSqlServer_connectionString": {
+		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
-		"aadsharma-cicd-ppe-source-WorkspaceDefaultStorage_properties_typeProperties_url": {
-			"value": "https://aadsharmadl.dfs.core.windows.net"
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1116_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1117_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1119_accountKey": {
+			"value": ""
+		},
+		"AzureMySql1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"Gen2112501_accountKey": {
+			"value": ""
+		},
+		"Gen21217_accountKey": {
+			"value": ""
+		},
+		"Kusto112501_servicePrincipalKey": {
+			"value": ""
+		},
+		"dancicdtest-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"dangitbugbash-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"dansynapsebugbash-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"dantestpara-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"gen21122_accountKey": {
+			"value": ""
+		},
+		"kusto1122_servicePrincipalKey": {
+			"value": ""
+		},
+		"kusto1123_servicePrincipalKey": {
+			"value": ""
+		},
+		"ltianscusworkspace-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"testpewsdeploy-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"workspacedeploy-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://hozhaotestgen2.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1116_properties_typeProperties_url": {
+			"value": "https://storagegen2qingtest.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage1116_properties_typeProperties_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1117_properties_typeProperties_url": {
+			"value": "https://storagegen2qingtest.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage1117_properties_typeProperties_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1118_properties_typeProperties_url": {
+			"value": "https://dansynapsestorage.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage1118_properties_typeProperties_accountKey": {
+			"value": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "name1"
+			}
+		},
+		"AzureDataLakeStorage1119_properties_typeProperties_url": {
+			"value": "https://accessibilitytest.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage1119_properties_typeProperties_accountKey": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://a365-e2e.vault.azure.net/"
+		},
+		"AzureMySql1_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"Gen1112501_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://storagegen1qingtest.azuredatalakestore.net/webhdfs/v1"
+		},
+		"Gen1112501_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"Gen1112501_properties_typeProperties_subscriptionId": {
+			"value": "051ddeca-1ed6-4d8b-ba6f-1ff561e5f3b3"
+		},
+		"Gen1112501_properties_typeProperties_resourceGroupName": {
+			"value": "bigdataqa"
+		},
+		"Gen2112501_properties_typeProperties_url": {
+			"value": "https://storagegen2qingtest.dfs.core.windows.net"
+		},
+		"Gen2112501_properties_typeProperties_accountKey": {
+			"value": ""
+		},
+		"Gen21217_properties_typeProperties_url": {
+			"value": "https://storagegen2qingtest.dfs.core.windows.net"
+		},
+		"Gen21217_properties_typeProperties_accountKey": {
+			"value": ""
+		},
+		"Kusto112501_properties_typeProperties_endpoint": {
+			"value": "https://kustodemo.westus2.kusto.windows.net"
+		},
+		"Kusto112501_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"Kusto112501_properties_typeProperties_servicePrincipalId": {
+			"value": "ac3a0e33-1db1-48ba-9b19-24ce0330ff5c"
+		},
+		"Kusto112501_properties_typeProperties_servicePrincipalKey": {
+			"value": ""
+		},
+		"Kusto112501_properties_typeProperties_database": {
+			"value": "cdndemo"
+		},
+		"PowerBIWorkspace1_properties_typeProperties_workspaceID": {
+			"value": "28a0e6b5-f83b-47c9-aa9f-eaab6b8a2bf9"
+		},
+		"PowerBIWorkspace1_properties_typeProperties_tenantID": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"dancicdtest-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"dancicdtest-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://accessibilitytest.dfs.core.windows.net"
+		},
+		"dangitbugbash-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"dangitbugbash-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://dansynapsestroage.dfs.core.windows.net"
+		},
+		"dansynapsebugbash-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"dansynapsebugbash-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://dansynapsestroage.dfs.core.windows.net"
+		},
+		"dantestpara-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"dantestpara-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://dansynapsestoragev2.dfs.core.windows.net"
+		},
+		"gen11123_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://ruxuadlsgen1.azuredatalakestore.net/webhdfs/v1"
+		},
+		"gen11123_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"gen11123_properties_typeProperties_subscriptionId": {
+			"value": "051ddeca-1ed6-4d8b-ba6f-1ff561e5f3b3"
+		},
+		"gen11123_properties_typeProperties_resourceGroupName": {
+			"value": "ruxurg"
+		},
+		"gen21122_properties_typeProperties_url": {
+			"value": "https://storagegen2qingtest.dfs.core.windows.net"
+		},
+		"gen21122_properties_typeProperties_accountKey": {
+			"value": ""
+		},
+		"kusto1122_properties_typeProperties_endpoint": {
+			"value": "https://lirsuntest.southeastasia.kusto.windows.net"
+		},
+		"kusto1122_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"kusto1122_properties_typeProperties_servicePrincipalId": {
+			"value": 123
+		},
+		"kusto1122_properties_typeProperties_servicePrincipalKey": {
+			"value": ""
+		},
+		"kusto1122_properties_typeProperties_database": {
+			"value": 789
+		},
+		"kusto1123_properties_typeProperties_endpoint": {
+			"value": "https://lirsuntest.southeastasia.kusto.windows.net"
+		},
+		"kusto1123_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"kusto1123_properties_typeProperties_servicePrincipalId": {
+			"value": 34
+		},
+		"kusto1123_properties_typeProperties_servicePrincipalKey": {
+			"value": ""
+		},
+		"kusto1123_properties_typeProperties_database": {
+			"value": 87654
+		},
+		"ltianscusworkspace-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"ltianscusworkspace-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://ltianscusgen2.dfs.core.windows.net"
+		},
+		"testpewsdeploy-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"testpewsdeploy-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://dansynapsestoragev2.dfs.core.windows.net"
+		},
+		"workspacedeploy-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": ""
+		},
+		"workspacedeploy-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://dansynapsestoragev2.dfs.core.windows.net"
+		},
+		"Credential1_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"Credential1_properties_typeProperties_servicePrincipalId": {
+			"value": "ij"
+		},
+		"Credential1_properties_typeProperties_servicePrincipalKey": {
+			"value": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "123"
+			}
+		},
+		"Credential2_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"Credential2_properties_typeProperties_servicePrincipalId": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"Credential2_properties_typeProperties_servicePrincipalKey": {
+			"value": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "name"
+			}
+		},
+		"sql script 1_properties_content_currentConnection_databaseName": {
+			"value": ""
+		},
+		"sql script 1_properties_content_currentConnection_poolName": {
+			"value": ""
+		},
+		"sql script 1_Copy1_properties_content_currentConnection_databaseName": {
+			"value": ""
+		},
+		"sql script 1_Copy1_properties_content_currentConnection_poolName": {
+			"value": ""
+		},
+		"SQL script 2_properties_content_currentConnection_databaseName": {
+			"value": ""
+		},
+		"SQL script 2_properties_content_currentConnection_poolName": {
+			"value": ""
+		},
+		"SQL script 3_properties_content_currentConnection_databaseName": {
+			"value": ""
+		},
+		"SQL script 3_properties_content_currentConnection_poolName": {
+			"value": ""
+		},
+		"Sql script1_properties_content_currentConnection_databaseName": {
+			"value": ""
+		},
+		"Sql script1_properties_content_currentConnection_poolName": {
+			"value": ""
+		},
+		"sql script 1_Copy1_Copy1_properties_content_currentConnection_databaseName": {
+			"value": ""
+		},
+		"sql script 1_Copy1_Copy1_properties_content_currentConnection_poolName": {
+			"value": ""
+		},
+		"Synapse Notebook1_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"Synapse Notebook_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"DebugFailCase3_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase3_Copy1_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase5_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase5_Copy2_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase5_Copy3_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase5_Copy4_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase6_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase7_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"DebugFailCase8_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCase9_properties_bigDataPool_referenceName": {
+			"value": "catest"
+		},
+		"DebugFailCases4_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"Getting Started with Delta Lake_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"InputOutputTest_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"InputOutputTest_Copy1_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"Synapse Notebook2_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"displayhtmlnotebook_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"displayhtmlnotebook_Copy1_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"displaynotebook_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"matplotlibnotebook_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"matplotlibnotebook_Copy1_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"mssparkutilsnotebook_properties_bigDataPool_referenceName": {
+			"value": "smallpool"
+		},
+		"outputAnalyzer_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"outputAnalyzer_Copy1_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"outputAnalyzer_Copy2_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"outputAnalyzer_Copy3_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"xiaolelTest_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"xiaolelTest1_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"xiaolelTest1_Copy1_properties_bigDataPool_referenceName": {
+			"value": "origin"
+		},
+		"xiaolelTest1_Copy1_Copy1_properties_bigDataPool_referenceName": {
+			"value": "origin"
 		}
 	}
 }
