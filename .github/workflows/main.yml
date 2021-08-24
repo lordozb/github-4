@@ -22,7 +22,7 @@ jobs:
       - name: 'Synapse workspace deployment'
         uses: Azure/Synapse-workspace-deployment@rmurl
         with:
-          TargetWorkspaceName: 'aadsharmasynapse'
+          TargetWorkspaceName: 'github-4'
           TemplateFile: './TemplateForWorkspace.json'
           ParametersFile: './TemplateParametersForWorkspace.json'
           environment: 'Azure US Government'
