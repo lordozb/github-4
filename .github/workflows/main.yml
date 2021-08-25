@@ -31,5 +31,6 @@ jobs:
           clientSecret: ${{ secrets.CLIENTSECRET }}
           subscriptionId: '8ef12316-67c1-417e-8175-a3a49c29fc64'
           tenantId: '72f988bf-86f1-41af-91ab-2d7cd011db47'
+          DeleteArtifactsNotInTemplate: 'true'
 
 
