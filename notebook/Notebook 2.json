@@ -23,8 +23,7 @@
 			},
 			"language_info": {
 				"name": "python"
-			},
-			"sessionKeepAliveTimeout": 30
+			}
 		},
 		"cells": [
 			{
@@ -32,6 +31,7 @@
 				"source": [
 					""
 				],
+				"attachments": null,
 				"execution_count": null
 			}
 		]
