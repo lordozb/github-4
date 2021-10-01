@@ -263,6 +263,18 @@
 			"location": "westus"
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/default/AzureKeyVault1')]",
+			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"privateLinkResourceId": "/subscriptions/8ef12316-67c1-417e-8175-a3a49c29fc64/resourceGroups/aadsharmarg/providers/Microsoft.KeyVault/vaults/aadsharmakv",
+				"groupId": "vault"
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/default')]",
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks",
 			"apiVersion": "2019-06-01-preview",
