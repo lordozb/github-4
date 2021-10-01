@@ -269,18 +269,7 @@
 			"properties": {},
 			"dependsOn": []
 		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/default/AzureKeyVault1')]",
-			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"privateLinkResourceId": "/subscriptions/051ddeca-1ed6-4d8b-ba6f-1ff561e5f3b3/resourceGroups/Dansynapse/providers/Microsoft.KeyVault/vaults/Dandatafactorykeyvault",
-				"groupId": "vault"
-			},
-			"dependsOn": [
-				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
-			]
-		},
+
 		{
 			"name": "[concat(parameters('workspaceName'), '/default/synapse-ws-sql--accessibilitytestep')]",
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
