@@ -5,15 +5,15 @@
 		"workspaceName": {
 			"type": "string",
 			"metadata": "Workspace name",
-			"defaultValue": "kusto-bg4"
+			"defaultValue": "aadsharma-mpe1"
 		},
-		"kusto-bg4-WorkspaceDefaultSqlServer_connectionString": {
+		"aadsharma-mpe1-WorkspaceDefaultSqlServer_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'kusto-bg4-WorkspaceDefaultSqlServer'"
+			"metadata": "Secure string for 'connectionString' of 'aadsharma-mpe1-WorkspaceDefaultSqlServer'"
 		},
-		"kusto-bg4-WorkspaceDefaultStorage_properties_typeProperties_url": {
+		"aadsharma-mpe1-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://kustobg.dfs.core.windows.net"
+			"defaultValue": "https://aadsharmadlc1.dfs.core.windows.net"
 		}
 	},
 	"variables": {
@@ -21,7 +21,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('workspaceName'), '/kusto-bg4-WorkspaceDefaultSqlServer')]",
+			"name": "[concat(parameters('workspaceName'), '/aadsharma-mpe1-WorkspaceDefaultSqlServer')]",
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
@@ -33,7 +33,7 @@
 				"annotations": [],
 				"type": "AzureSqlDW",
 				"typeProperties": {
-					"connectionString": "[parameters('kusto-bg4-WorkspaceDefaultSqlServer_connectionString')]"
+					"connectionString": "[parameters('aadsharma-mpe1-WorkspaceDefaultSqlServer_connectionString')]"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -45,14 +45,14 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/kusto-bg4-WorkspaceDefaultStorage')]",
+			"name": "[concat(parameters('workspaceName'), '/aadsharma-mpe1-WorkspaceDefaultStorage')]",
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
-					"url": "[parameters('kusto-bg4-WorkspaceDefaultStorage_properties_typeProperties_url')]"
+					"url": "[parameters('aadsharma-mpe1-WorkspaceDefaultStorage_properties_typeProperties_url')]"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -78,9 +78,15 @@
 							"timeToLive": 0
 						}
 					}
+				},
+				"managedVirtualNetwork": {
+					"type": "ManagedVirtualNetworkReference",
+					"referenceName": "default"
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('workspaceName'), '/WorkspaceSystemIdentity')]",
@@ -93,23 +99,65 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/KQL script 1')]",
-			"type": "Microsoft.Synapse/workspaces/kqlscripts",
+			"name": "[concat(parameters('workspaceName'), '/default')]",
+			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/default/synapse-ws-custstgacct--aadsharma-mpe1-aadsharmadlc1')]",
+			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"content": {
-					"query": "\nkustobg4pool1db \n | project  ",
-					"metadata": {
-						"language": "kql"
-					},
-					"currentConnection": {
-						"poolName": "kustobg4pool1",
-						"databaseName": "kustobg4pool1db"
-					}
-				},
-				"type": "KqlQuery"
+				"privateLinkResourceId": "/subscriptions/8d879196-757f-45fc-be50-b2b445874fe7/resourceGroups/aadsharmarg/providers/Microsoft.Storage/storageAccounts/aadsharmadlc1",
+				"groupId": "dfs"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/default/synapse-ws-sql--aadsharma-mpe1')]",
+			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"privateLinkResourceId": "/subscriptions/8ef12316-67c1-417e-8175-a3a49c29fc64/resourceGroups/actionbugbash/providers/Microsoft.Synapse/workspaces/aadsharma-mpe1",
+				"groupId": "sql",
+				"fqdns": [
+					"aadsharma-mpe1.f7b5f11e-abee-4986-a9e2-0028941b5672.sql.azuresynapse.net"
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/default/synapse-ws-sqlOnDemand--aadsharma-mpe1')]",
+			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"privateLinkResourceId": "/subscriptions/8ef12316-67c1-417e-8175-a3a49c29fc64/resourceGroups/actionbugbash/providers/Microsoft.Synapse/workspaces/aadsharma-mpe1",
+				"groupId": "sqlOnDemand",
+				"fqdns": [
+					"aadsharma-mpe1-ondemand.f7b5f11e-abee-4986-a9e2-0028941b5672.sql.azuresynapse.net"
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/default/my-keyvault')]",
+			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks/managedPrivateEndpoints",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"privateLinkResourceId": "/subscriptions/8ef12316-67c1-417e-8175-a3a49c29fc64/resourceGroups/aadsharmarg/providers/Microsoft.KeyVault/vaults/aadsharmakv",
+				"groupId": "vault"
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
+			]
 		}
 	]
 }
