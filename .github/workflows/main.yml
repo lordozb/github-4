@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: 'Synapse workspace deployment'
-        uses: Azure/Synapse-workspace-deployment@v1.2.2
+        uses: Azure/Synapse-workspace-deployment@V1.2.2
         with:
           TargetWorkspaceName: 'aadsharma-mpe2'
           TemplateFile: './TemplateForWorkspace.json'
