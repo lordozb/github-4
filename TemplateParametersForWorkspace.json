@@ -1,15 +1,14 @@
-{
 	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"workspaceName": {
-			"value": "kusto-bg4"
+			"value": "aadsharma-mpe1"
 		},
-		"kusto-bg4-WorkspaceDefaultSqlServer_connectionString": {
+		"aadsharma-mpe1-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
 		},
-		"kusto-bg4-WorkspaceDefaultStorage_properties_typeProperties_url": {
-			"value": "https://kustobg.dfs.core.windows.net"
+		"aadsharma-mpe1-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://aadsharmadlc1.dfs.core.windows.net"
 		}
 	}
 }
