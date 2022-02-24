@@ -1,0 +1,6 @@
+{
+	"name": "MYSQLIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
