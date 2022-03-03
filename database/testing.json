@@ -1,0 +1,22 @@
+{
+	"name": "testing",
+	"properties": {
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Name": "testing",
+		"EntityType": "DATABASE",
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://actionbugbash@actionbugbash.dfs.core.windows.net/testing",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "github-4-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
